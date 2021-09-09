@@ -8,31 +8,31 @@ using System.Threading.Tasks;
 
 namespace MovieRater.Services
 {
-    public class ShowService
+    public class RatingService
     {
         private readonly Guid _userId;
 
-        public ShowService(Guid userId)
+        public RatingService(Guid userId)
         {
             _userId = userId;
         }
 
-        public bool CreateShow(ShowCreate model)
+        public bool CreateRating(RatingsCreate model)
         {
-            Show show = new Show() { Title = model.Title, Description = model.Description, Genre = model.Genre, Rating = model.Rating, Season = model.Season };
+            Ratings rating = new Ratings() {Rating = model.Rating, Comment = model.Comment, MovieId = model.MovieId, ShowId = model.ShowId };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Shows.Add(show);
+                ctx.Ratings.Add(rating);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<ShowListItem> GetShows()
+        public IEnumerable<RatingsListItem> GetRatings()
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = ctx.Shows.Where(e => e.UserId == _userId).Select(e => new ShowListItem { Title = e.Title, Description = e.Description, Genre = e.Genre, Rating = e.Rating, Season = e.Season });
+                var query = ctx.Ratings.Where(e => e.UserId == _userId).Select(e => new RatingsListItem {Rating = e.Rating, Comment = e.Comment});
 
                 return query.ToArray();
             }
