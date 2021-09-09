@@ -13,6 +13,6 @@ namespace MovieRater.Services
         public readonly string Rating;
         public readonly string Season;
         public readonly string Description;
-        public ShowService(title)
+        //public ShowService(title)
     }
 }
