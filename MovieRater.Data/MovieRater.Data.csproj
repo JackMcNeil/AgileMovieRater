@@ -84,7 +84,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MovieCreate.cs" />
     <Compile Include="Show.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Movie.cs" />
