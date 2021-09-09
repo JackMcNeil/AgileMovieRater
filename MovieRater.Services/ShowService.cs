@@ -8,5 +8,11 @@ namespace MovieRater.Services
 {
     class ShowService
     {
+        public readonly string Title;
+        public readonly string Genre;
+        public readonly string Rating;
+        public readonly string Season;
+        public readonly string Description;
+        public ShowService(title)
     }
 }
