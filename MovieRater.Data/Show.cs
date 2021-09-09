@@ -9,6 +9,9 @@ namespace MovieRater.Data
 {
     public class Show
     {
+        [Key]
+        public int ShowId { get; set; }
+        public Guid UserId { get; set; }
         [Required]
         public  string Title  { get; set; }
         [Required]

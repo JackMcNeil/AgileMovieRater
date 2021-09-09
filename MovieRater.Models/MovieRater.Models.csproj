@@ -61,6 +61,7 @@
     <Compile Include="RatingsListItem.cs" />
     <Compile Include="ReplyCreate.cs" />
     <Compile Include="ShowCreate.cs" />
+    <Compile Include="ShowListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -7,13 +7,17 @@ using System.Threading.Tasks;
 
 namespace MovieRater.Models
 {
-   public class ShowCreate
+    public class ShowListItem
     {
         [Required]
-        public  string Title { get; set; }
+        public string Title { get; set; }
+        [Required]
         public string Genre { get; set; }
+        [Required]
         public string Rating { get; set; }
-        public int Season  { get; set; }
+        [Required]
+        public int Season { get; set; }
+        [Required]
         public string Description { get; set; }
     }
 }

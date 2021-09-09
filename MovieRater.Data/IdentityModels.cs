@@ -34,6 +34,9 @@ namespace MovieRater.Data
         }
 
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<Show> Shows { get; set; }
+        public DbSet<Ratings> Ratings { get; set; }
+        public DbSet<Reply> Replies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
